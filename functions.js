@@ -8,15 +8,14 @@ function openSection(evt, sectionName) {
       tabcontent[i].style.display = "none";
     }
   
-    // Get all elements with class="tablinks" and remove the class "active"
+    // Get all elements with class="tablinks" and remove the class "focus"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].className = tablinks[i].className.replace("focus", "background");
     }
   
-    // Show the current tab, and add an "active" class to the button that opened the tab
+    // Show the current tab, and add an "focus" class to the button that opened the tab
      document.getElementById(sectionName).style.display = "block";
-     evt.currentTarget.className += " active";
+     evt.currentTarget.className = "tablinks focus";
    }
 
-   console.log("This is a test deploy");
