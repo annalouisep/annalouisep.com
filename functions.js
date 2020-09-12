@@ -18,3 +18,5 @@ function openSection(evt, sectionName) {
      document.getElementById(sectionName).style.display = "block";
      evt.currentTarget.className += " active";
    }
+
+   console.log("This is a test deploy");
