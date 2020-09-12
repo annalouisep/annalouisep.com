@@ -41,19 +41,12 @@ body {
   /* Change background color of buttons on hover */
 .tab button:hover {
     background-color: #f1f1f1;
+    color: black;
   }
-  
-  /* Create an active/current tablink class */
-.tab button:active {
-    background-color: purple;
-  }
-
-.tab .background {
-    background-color: green;
-}
 
 .tab .focus {
-    background-color: orange;
+    background-color: #88abec;
+    color: white;
 }
   
   /* Style the tab content */
