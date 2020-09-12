@@ -15,6 +15,6 @@ function openSection(evt, sectionName) {
     }
   
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(sectionName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
+     document.getElementById(sectionName).style.display = "block";
+     evt.currentTarget.className += " active";
+   }

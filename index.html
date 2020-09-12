@@ -6,7 +6,7 @@
 
 <body>
 <script src="functions.js"></script>
-<script>document.getElementById("defaultOpen").click();</script>
+
 
 <section id="header" class="header-max-body-width">
   <p>
@@ -16,11 +16,12 @@
 </section>
 
 <div class="tab">
-  <button class="tablinks" onclick="openSection(event, 'Summary')" id="defaultOpen">Summary</button>
-  <button class="tablinks" onclick="openSection(event, 'Education')">Education</button>
-  <button class="tablinks" onclick="openSection(event, 'Work Experience')">Work Experience</button>
+  <button class="tablinks" onclick="openSection(event, 'Summary')" id="Butts">Summary</button>
+  <button class="tablinks" onclick="openSection(event, 'Education')" id="Hats">Education</button>
+  <button class="tablinks" onclick="openSection(event, 'Work Experience')" id="Farts">Work Experience</button>
 </div>
 
+<!-- <script>document.getElementById("Butts").click();</script> -->
 
 <div id="Summary" class="tabcontent">
   <h2>Summary</h2>
@@ -62,5 +63,6 @@
   </div>
 </div>
 
+<script>document.getElementById("Butts").click();</script>
 </body>
 </html>
