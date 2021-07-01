@@ -15,9 +15,16 @@
   </p>
 </section>
 
+<img class="headshot">
+  <img srcset="Anna-desktop.jpg 4000w,
+            Anna-mobile.jpg 400w"
+    sizes="(max-width: 500px) 400px, 600px"
+    src="Anna-desktop.jpg">
+</img>
+
 <div class="tab">
   <button class="tablinks focus" onclick="openSection(event, 'Summary')" id="summary-button">Summary</button>
-  <button class="tablinks background" onclick="openSection(event, 'Education')" id="education-button">Education</button>
+  <button class="tablinks background" onclick="openSection(event, 'Education and Volunteering')" id="education-button">Education and Volunteering</button>
   <button class="tablinks background" onclick="openSection(event, 'Work Experience')" id="workexperience-button">Work Experience</button>
 </div>
 
@@ -32,12 +39,14 @@
   </ul>
 </div>
 
-<div id="Education" class="tabcontent">
+<div id="Education and Volunteering" class="tabcontent">
   <h2>Education</h2>
   <h4>University of Texas at Austin</h4>
   <p>Bachelors of Science in Marine and Freshwater Biology 2012<br> Bachelors of Arts in History 2012</p>
   <h4>Scrum Alliance</h4>
   <p>Certified Scrum Master</p>
+  <h2>Volunteering</h2>
+  <p>Code2College Corporate Advisory Board</p>
 </div>
 
 
