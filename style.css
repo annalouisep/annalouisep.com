@@ -112,6 +112,7 @@ body {
   .left-column {
     justify-content: center;
     margin-bottom: 8px;
+    display: none;
   }
   #headshot { max-width: 120px; }
 
@@ -119,7 +120,7 @@ body {
   /* position hamburger top-right on mobile */
   .tab-toggle {
     position: fixed;
-    top: 12px;
+    top: 107px;
     right: 18px;
     z-index: 1200;
     background: rgba(255,255,255,0.95);
