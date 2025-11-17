@@ -1,7 +1,34 @@
-git clone https://github.com/annalouisep/annalouisep.com.git
-mv annalouisep.com/index.html /srv/www/annalouisep.com/
-mv annalouisep.com/functions.js /srv/www/annalouisep.com/
-mv annalouisep.com/style.css /srv/www/annalouisep.com
-mv annalouisep.com/anna-desktop.jpg /srv/www/annalouisep.com
-mv annalouisep.com/pottery /srv/www/annalouisep.com
-rm -rf annalouisep.com/
+#!/bin/bash
+
+set -e  # Stop on error
+
+########################################
+# CONFIGURATION
+########################################
+REMOTE_USER="root"
+#remote host is my DigitalOcean server IP
+REMOTE_HOST="142.93.125.221"
+REMOTE_PATH="/srv/www/annalouisep.com"
+
+########################################
+# DEPLOY
+########################################
+echo "Building file list..."
+
+# Create a temporary package directory
+TMP_DIR=$(mktemp -d)
+
+# Copy all project files except unwanted ones
+rsync -av --exclude=".git" \
+          --exclude="deploy.sh" \
+          --exclude=".DS_Store" \
+          ./ "$TMP_DIR/"
+
+echo "Copying files to remote server..."
+
+scp -r "$TMP_DIR/"* "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
+
+echo "Cleaning up..."
+rm -rf "$TMP_DIR"
+
+echo "Deployment completed successfully!"
