@@ -22,6 +22,7 @@ TMP_DIR=$(mktemp -d)
 rsync -av --exclude=".git" \
           --exclude="deploy.sh" \
           --exclude=".DS_Store" \
+          --exclude="README.md" \
           ./ "$TMP_DIR/"
 
 echo "Copying files to remote server..."
