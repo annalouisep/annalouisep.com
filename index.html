@@ -1,6 +1,7 @@
 <html lang="en-US">
 <head>
   <title>Anna Louise Percy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,7 +23,13 @@
       <img id="headshot" src="Anna-desktop.jpg" alt="Anna Louise Percy">
     </div>
     <div class="content">
-    <div class="tab">
+    <button id="tab-toggle" class="tab-toggle" aria-expanded="false" aria-controls="main-tabs">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="vis">Show navigation</span>
+    </button>
+    <div class="tab" id="main-tabs">
       <button class="tablinks focus" onclick="openSection(event, 'Summary')" id="summary-button">Summary</button>
       <button class="tablinks background" onclick="openSection(event, 'Education and Volunteering')" id="education-button">Education and Volunteering</button>
       <button class="tablinks background" onclick="openSection(event, 'Work Experience')" id="workexperience-button">Work Experience</button>
